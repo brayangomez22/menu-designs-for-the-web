@@ -1,0 +1,86 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.navegacion{
+	margin-top: 250px;
+	width: 100%;
+	background: #1c1c1c;
+	display: flex;
+	justify-content: center;
+}
+
+.menu{
+	width: 1000px;
+	display: flex;
+	flex-wrap: center;
+	height: 90px;
+}
+
+.menu li{
+	flex-basis: 0;
+	flex-grow: 1;
+	position: relative;
+	border-right: 1px solid #363636;
+}
+
+.menu .gym{
+	border-left: 1px solid #363636;
+}
+
+.menu li a{
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+}
+
+.menu .brayan{
+	position: absolute;
+	width: 0%;
+	height: 30px;
+	bottom: 0;
+	right: 30px;
+	z-index: 20;
+	-webkit-transition:.4s ease;
+	-o-transition:.4s ease;
+	transition: .4s ease;
+}
+
+.menu li a .down-item{
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background: #1c1c1c;
+	-webkit-transition:.4s ease;
+	-o-transition:.4s ease;
+	transition: .4s ease;
+}
+
+.menu li a .text-item{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	top: 0%;
+	position: absolute;
+	z-index: 10;
+	-webkit-transition:.4s ease;
+	-o-transition:.4s ease;
+	transition: .4s ease;
+}
+
+.menu li:hover .down-item, .menu li:hover .text-item{
+	top: 100%;
+	height: 115%;
+}
+
+.menu li:hover .brayan{
+	width: 100%;
+	height: 100%;
+	right: 0px;
+}

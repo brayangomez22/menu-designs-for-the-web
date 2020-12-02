@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    user-select: none;
+}
+
+.menu-bar,label{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#check:checked ~ label{
+    left: 91%;
+    transform: translateY(-50%);
+}
+
+.menu-bar label{
+    z-index: 1;
+    transition: .35s ease-in;
+}
+
+.menu-bar label .button{
+    display: flex;
+    width: 61px;
+    height: 65px;
+    background: #097adc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label .button i{
+    margin: auto;
+    font-size: 34px;
+    color: white;
+    transform: rotateZ(0turn);
+    transition: transform .2s linear;
+}
+
+#check:checked ~ label .button i{
+    transform: rotateZ(0.5turn);
+}
+
+#check:checked ~ label .button i::before{
+    content: ' \f00d';
+}
+
+.menu-bar .menu-items{
+    background: #f5f5f5;
+    padding: 0 60px 0 0;
+    box-shadow: 0 0 5px #075fab;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .35s ease-in;
+}
+
+#check:checked ~ .menu-items{
+    transform: scaleX(1);
+}
+
+.menu-items {
+    display: flex;
+    padding: 20px 5px;
+}
+
+.menu-items  .nav-item{
+    color: black;
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 20px 15px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.menu-items  .nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #dfe2ea;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu-items .nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+}
+
+.menu-items .nav-item:not(.is-active):hover {
+    color: #333;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: 0.4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+
+#check{
+    display: none;
+}

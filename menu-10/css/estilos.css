@@ -1,0 +1,90 @@
+body{
+    font-size: 12px;
+    font-family: sans-serif;
+    background-image: url(../img/fondo.jpg);
+    text-align: center;
+    background-size: cover;
+}
+
+.container{
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 350px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    background: #f6bd37; 
+    max-height: 0;
+    transition: all 600ms cubic-bezier(0.19,1,0.22,1);
+    overflow: hidden;
+    border-radius: 3px;
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+li a {
+    padding: 12px 0;
+    display: block;
+    transition: 0.25s;
+}
+
+li a:hover{
+    background: #1e1f1f;
+}
+
+a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+i{
+    padding: 20px;
+    background: orange;
+    border-radius: 3px;
+    color: white;
+    transition: .25s;
+    animation: 1.25s bounce infinite;
+}
+
+i:hover{
+    cursor: pointer;
+    background: rgba(225, 225, 225, .95);
+    animation-play-state: paused;
+    color: orange;
+}
+
+ul.open{
+    max-height: 480px;
+    visibility: visible;
+    opacity: 1;
+    transform: rotate(0);
+}
+
+@keyframes bounce{
+    0%{
+        margin-top: 0;
+    }
+    50%{
+        margin-top: -15px;
+        margin-bottom: 15px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+.container ~ ★{
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

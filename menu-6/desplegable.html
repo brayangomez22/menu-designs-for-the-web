@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>menu desplegable</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.header{
+			margin: auto;
+			width: 500px;
+		}
+
+		ul,ol{
+			list-style: none;
+		}
+
+		.nav li a{
+			background: black;
+			color: white;
+			text-decoration: none;
+			padding: 10px 15px;
+			display: block;
+		}
+
+		.nav li a:hover{
+			background: #434343;
+
+		}
+
+		.nav > li{
+			float: left;
+		}
+
+		.nav li ul{
+			display:none;
+			position: absolute;
+			min-width: 140px;
+		}
+
+		.nav li:hover > ul{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<ul class="nav">
+			<li><a href="">habilidades</a>
+				<ul>
+					<li><a href="">habilidad 1</a></li>
+					<li><a href="">habilidad 2</a></li>
+					<li><a href="">habilidad 3</a></li>
+				</ul>
+			</li>
+
+			<li><a href="">intereses</a>
+				<ul>
+					<li><a href="">interes 1</a></li>
+					<li><a href="">interes 2</a></li>
+					<li><a href="">interes 3</a></li>
+				</ul>
+			</li>
+
+			<li><a href="">estudios</a>
+				<ul>
+					<li><a href="">estudio 1</a></li>
+					<li><a href="">estudio 2</a></li>
+					<li><a href="">estudio 3</a></li>
+				</ul>
+			</li>
+
+			<li><a href="">aspiraciones</a>
+				<ul>
+					<li><a href="">aspiracion 1</a></li>
+					<li><a href="">aspiracion 2</a></li>
+					<li><a href="">aspiracion 3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
